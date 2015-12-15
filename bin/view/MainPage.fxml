@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="400.0" maxWidth="600.0" minHeight="400.0" minWidth="600.0" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.GraphController">
+   <children>
+      <Pane prefHeight="218.0" prefWidth="226.0" style="-fx-background-color: grey;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <ListView fx:id="elements" editable="true" layoutX="181.0" prefHeight="400.0" prefWidth="419.0" style="-fx-background-color: white;" />
+            <Button layoutX="14.0" layoutY="22.0" mnemonicParsing="false" onAction="#Add" prefHeight="104.0" prefWidth="156.0" text="ADD" />
+            <Button layoutX="14.0" layoutY="148.0" mnemonicParsing="false" onAction="#Show" prefHeight="104.0" prefWidth="156.0" text="SHOW" />
+            <Button layoutX="14.0" layoutY="271.0" mnemonicParsing="false" onAction="#Save" prefHeight="104.0" prefWidth="156.0" text="SAVE" />
+         </children>
+      </Pane>
+      <Pane fx:id="AddItemPage" layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: grey;" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <TextField fx:id="name" layoutX="84.0" layoutY="124.0" />
+            <TextField fx:id="value" layoutX="369.0" layoutY="124.0" />
+            <Button layoutX="16.0" layoutY="251.0" mnemonicParsing="false" onAction="#AddValue" prefHeight="138.0" prefWidth="569.0" text="Add" />
+            <Label layoutX="123.0" layoutY="79.0" mouseTransparent="true" prefHeight="17.0" prefWidth="71.0" text="Name">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Label layoutX="408.0" layoutY="79.0" mouseTransparent="true" prefHeight="17.0" prefWidth="71.0" text="Value">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane fx:id="GraphPane" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white;" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Button layoutX="14.0" layoutY="298.0" mnemonicParsing="false" onAction="#Back" prefHeight="88.0" prefWidth="569.0" text="BACK" />
+         </children>
+      </Pane>
+      <Pane fx:id="AuthorizePane" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label layoutX="110.0" layoutY="96.0" prefHeight="27.0" prefWidth="381.0" text="2. Click \&quot;Allow\&quot; (you might have to log in first)">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="110.0" layoutY="123.0" prefHeight="17.0" prefWidth="277.0" text="3. Copy the authorization code.">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="code" layoutX="160.0" layoutY="200.0" prefHeight="25.0" prefWidth="277.0" />
+            <Button layoutX="160.0" layoutY="291.0" mnemonicParsing="false" onAction="#Submit" prefHeight="88.0" prefWidth="277.0" text="SUBMIT" />
+            <TextField fx:id="FirstStep" editable="false" layoutX="19.0" layoutY="60.0" prefHeight="25.0" prefWidth="560.0" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
